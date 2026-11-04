@@ -1,0 +1,61 @@
+{
+  "name": "kursi-wisuda",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "test:admin": "node --experimental-strip-types scripts/admin-session.test.mjs",
+    "test:seats": "node --experimental-strip-types scripts/seat-generator.test.mjs",
+    "test:layout": "node --experimental-strip-types scripts/seat-layout-supabase.test.mjs",
+    "test:security": "node --experimental-strip-types scripts/participants-security.test.mjs",
+    "test:security:postgres": "node --experimental-strip-types scripts/postgres-real-security.test.mjs",
+    "test:api:attendance": "node --experimental-strip-types scripts/attendance-api.test.mjs",
+    "test:prodi": "node --experimental-strip-types scripts/prodi-normalization.test.mjs",
+    "test:uat": "node --experimental-strip-types scripts/test-uat-full.ts",
+    "test:e2e": "node --experimental-strip-types scripts/test-e2e.mjs",
+    "audit:supabase": "node scripts/audit-supabase.mjs",
+    "import:dry": "node --experimental-strip-types scripts/import-excel.ts --dry-run",
+    "import:excel": "node --experimental-strip-types scripts/import-excel.ts",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src",
+    "seed": "ts-node -O '{\"module\":\"CommonJS\"}' scripts/seed.ts",
+    "test:excel": "node scripts/excel.test.cjs"
+  },
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.43.4",
+    "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
+    "framer-motion": "^12.39.0",
+    "lucide-react": "^0.468.0",
+    "next": "15.5.28",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwind-merge": "^2.3.0",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.14",
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/node": "^20.14.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "15.5.28",
+    "lighthouse": "^13.3.0",
+    "postcss": "^8.5.23",
+    "tailwindcss": "^3.4.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "brace-expansion@^1.0.0": "^1.1.21"
+  },
+  "allowScripts": {
+    "unrs-resolver": false
+  }
+}

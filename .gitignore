@@ -1,0 +1,60 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files (never commit real credentials)
+.env*.local
+.env
+.env.*
+!.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Data files & personal information (Wisudawan)
+*.xlsx
+*.xls
+*.csv
+participants.json
+scripts/uat-results.json
+seed_data.sql
+
+# Internal AI tooling, session plans & checkpoints
+spesifikasi-denah-kursi-wisuda-gemini-cli.md
+docs/CHECKPOINT.md
+docs/DEPENDENCY-UPDATE.md
+docs/superpowers/
+.superpowers/
+*_plan.md
+walkthrough.md
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+
+# Scratch & temporary testing files
+temp-pkg/
+public/test.css
